@@ -43,3 +43,22 @@ Then type any question about your document. Type `quit` to exit.
 - RAGAS evaluation for retrieval quality metrics
 - LangSmith tracing for production observability
 - Streamlit dashboard for visualization
+
+## Evaluation
+
+RAG quality is measured using [RAGAS](https://docs.ragas.io), an open-source evaluation framework for retrieval-augmented generation pipelines.
+
+Run the evaluation:
+```bash
+uv run eval.py
+```
+
+**Metrics:**
+- **Faithfulness** — measures whether answers are grounded in the retrieved context. A score of 1.0 means no hallucination detected.
+- **Answer Relevancy** — measures how relevant the answer is to the question asked.
+
+**Results on DiffMAS paper:**
+| Metric | Score |
+|---|---|
+| Faithfulness | 1.0 |
+| Answer Relevancy | 0.95 |
